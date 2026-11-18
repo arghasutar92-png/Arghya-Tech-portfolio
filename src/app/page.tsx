@@ -41,7 +41,7 @@ export default async function Home() {
           <div className="relative aspect-square rounded-[2rem] border border-sky-400/20 bg-slate-950/60 p-6 shadow-[0_0_80px_rgba(56,189,248,.12)]">
             <div className="absolute left-5 top-5 h-3 w-3 rounded-full bg-amber-400 shadow-[0_0_16px_rgba(251,191,36,.8)]" />
             <Image
-              src="/assets/images/at-circuit-logo.svg"
+              src="/assets/images/argh-tech-logo.jpeg"
               alt="Argh Tech AT circuit logo"
               fill
               priority
