@@ -69,11 +69,8 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
 
       {projects.length === 0 ? (
         <Card className="border-dashed p-8 sm:p-10">
-          <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-sky-400">Media ready</p>
-          <h3 className="text-2xl font-semibold">Your portfolio is ready</h3>
-          <p className="mt-3 max-w-xl text-zinc-400">
-            Add project folders with images to public/assets/images/ and demos to public/assets/videos/.
-          </p>
+          <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-sky-400">Portfolio</p>
+          <h3 className="text-2xl font-semibold">No projects to display</h3>
         </Card>
       ) : filteredProjects.length === 0 ? (
         <Card className="border-dashed p-8 text-center text-slate-400">
