@@ -57,44 +57,50 @@ async function walkDirectory(
   return results;
 }
 
-function titleFromSlug(slug: string): string {
-  return slug
-    .split(/[-_]+/)
-    .filter(Boolean)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
-function categoryFromSlug(slug: string): Project["category"] {
-  const value = slug.toLowerCase();
-  if (value.includes("store") || value.includes("digital-store")) {
-    return "Digital Stores";
-  }
-  if (value.includes("ecommerce") || value.includes("e-commerce") || value.includes("shop")) {
-    return "E-commerce";
-  }
-  return "Landing Pages";
-}
-
 export async function getProjectsData(): Promise<Project[]> {
   const [images, videos] = await Promise.all([
     readMediaDirectory("images"),
     readMediaDirectory("videos"),
   ]);
-  const projectKeys = new Set([
-    ...images.map(({ key }) => key),
-    ...videos.map(({ key }) => key),
-  ]);
 
-  return [...projectKeys]
-    .sort((a, b) => a.localeCompare(b))
-    .map((slug) => ({
-      slug,
-      title: titleFromSlug(slug),
-      description: "",
-      technologies: [],
-      category: categoryFromSlug(slug),
-      images: images.filter((item) => item.key === slug).map((item) => item.media),
-      videos: videos.filter((item) => item.key === slug).map((item) => item.media),
-    }));
+  const actualProjects: Array<Omit<Project, "images" | "videos">> = [
+    {
+      slug: "lemon-squeezy-digital-store",
+      title: "Lemon Squeezy Digital Store",
+      description: "A modern digital storefront designed for selling e-books, tools, and digital goods.",
+      technologies: ["Digital Store", "E-commerce"],
+      category: "Digital Stores",
+      liveUrl: "https://lemon-squeezy-store.vercel.app",
+    },
+    {
+      slug: "autosync-ai-landing-page",
+      title: "AutoSync AI Landing Page",
+      description: "High-converting SaaS landing page for an AI automation and copywriting platform.",
+      technologies: ["Landing Page", "SaaS"],
+      category: "Landing Pages",
+      liveUrl: "https://brilliant-torrone-400f76.netlify.app",
+    },
+    {
+      slug: "e-commerce-landing-page-template",
+      title: "E-Commerce Landing Page Template",
+      description: "Ready-to-use e-commerce storefront and landing page template available for digital purchase.",
+      technologies: ["E-commerce", "Landing Page"],
+      category: "E-commerce",
+      liveUrl: "https://mintlink.in/m/e-commerce-landing-page-template-2cc8a593",
+    },
+    {
+      slug: "deys-guinea-house",
+      title: "Deys Guinea House",
+      description: "Luxury gold and diamond jewellery showcase website for Bowbazar's premier jewellery destination.",
+      technologies: ["Jewellery", "E-commerce"],
+      category: "E-commerce",
+      liveUrl: "https://deys-guinnea-house-web.vercel.app",
+    },
+  ];
+
+  return actualProjects.map((project) => ({
+    ...project,
+    images: images.filter((item) => item.key === project.slug).map((item) => item.media),
+    videos: videos.filter((item) => item.key === project.slug).map((item) => item.media),
+  }));
 }
