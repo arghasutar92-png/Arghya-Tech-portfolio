@@ -86,17 +86,35 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
             const previewVideo = project.videos[0];
 
             return (
-              <Card key={project.slug} className="group overflow-hidden">
+              <Card
+                key={project.slug}
+                role={project.liveUrl ? "link" : undefined}
+                tabIndex={project.liveUrl ? 0 : undefined}
+                aria-label={project.liveUrl ? `Open ${project.title} live website` : undefined}
+                onClick={() => {
+                  if (project.liveUrl) {
+                    window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+                  }
+                }}
+                onKeyDown={(event) => {
+                  if (project.liveUrl && (event.key === "Enter" || event.key === " ")) {
+                    event.preventDefault();
+                    window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+                  }
+                }}
+                className="group overflow-hidden cursor-pointer"
+              >
                 <button
                   type="button"
                   className="relative block aspect-[16/10] w-full overflow-hidden bg-slate-950 text-left"
-                  onClick={() =>
-                    previewImage
-                      ? setPreview({ type: "image", src: previewImage.src, name: previewImage.name })
-                      : previewVideo
-                        ? setPreview({ type: "video", src: previewVideo.src, name: previewVideo.name })
-                        : null
-                  }
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    if (previewImage) {
+                      setPreview({ type: "image", src: previewImage.src, name: previewImage.name });
+                    } else if (previewVideo) {
+                      setPreview({ type: "video", src: previewVideo.src, name: previewVideo.name });
+                    }
+                  }}
                   aria-label={`Open ${project.title} preview`}
                 >
                   {previewImage ? (
@@ -136,7 +154,10 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
                     {previewVideo && (
                       <button
                         type="button"
-                        onClick={() => setPreview({ type: "video", src: previewVideo.src, name: previewVideo.name })}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          setPreview({ type: "video", src: previewVideo.src, name: previewVideo.name });
+                        }}
                         className="text-xs font-semibold text-amber-300 transition hover:text-amber-200"
                       >
                         Play demo
@@ -164,6 +185,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(event) => event.stopPropagation()}
                         className="inline-flex h-11 items-center justify-center rounded-lg bg-sky-400 px-5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
                       >
                         Live Demo
@@ -171,6 +193,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
                     ) : (
                       <Link
                         href="#contact"
+                        onClick={(event) => event.stopPropagation()}
                         className="inline-flex h-11 items-center justify-center rounded-lg bg-sky-400 px-5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
                       >
                         Live Demo
@@ -178,6 +201,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
                     )}
                     <Link
                       href="#contact"
+                      onClick={(event) => event.stopPropagation()}
                       className="inline-flex h-11 items-center justify-center rounded-lg border border-amber-400/40 bg-amber-400/10 px-5 text-sm font-semibold text-amber-300 transition hover:border-amber-300"
                     >
                       Order Similar
