@@ -85,7 +85,7 @@ export async function getProjectsData(): Promise<Project[]> {
       title: "E-Commerce Landing Page Template",
       description: "Ready-to-use e-commerce storefront and landing page template available for digital purchase.",
       technologies: ["E-commerce", "Landing Page"],
-      category: "E-commerce",
+      category: "Digital Stores",
       liveUrl: "https://mintlink.in/m/e-commerce-landing-page-template-2cc8a593",
     },
     {
