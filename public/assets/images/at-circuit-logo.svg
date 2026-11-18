@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="blue" x1="72" y1="64" x2="440" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="150" y1="120" x2="360" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#050816"/>
+  <rect x="22" y="22" width="468" height="468" rx="94" stroke="#38BDF8" stroke-opacity=".22" stroke-width="4"/>
+  <path d="M92 256H48M464 256h-44M256 92V48M256 464v-44" stroke="#38BDF8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="48" cy="256" r="8" fill="#FBBF24"/>
+  <circle cx="464" cy="256" r="8" fill="#FBBF24"/>
+  <circle cx="256" cy="48" r="8" fill="#FBBF24"/>
+  <circle cx="256" cy="464" r="8" fill="#FBBF24"/>
+  <path d="M126 372L226 140H286L386 372H326L306 320H206L186 372H126ZM226 268H286L256 192L226 268Z" fill="url(#blue)"/>
+  <path d="M354 140H410V372H354V140Z" fill="url(#gold)" transform="translate(-22 0)"/>
+  <path d="M354 140H410V372H354V140Z" stroke="#FDE68A" stroke-opacity=".5" stroke-width="4" transform="translate(-22 0)"/>
+</svg>
