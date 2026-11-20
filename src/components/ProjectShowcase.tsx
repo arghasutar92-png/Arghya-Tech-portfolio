@@ -40,7 +40,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
     <Section id="work" className="pb-24 pt-8">
       <div className="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
         <div>
-          <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-sky-400">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
             Selected work
           </p>
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
@@ -57,7 +57,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
               aria-pressed={activeCategory === category}
               className={`shrink-0 rounded-lg border px-4 py-2 text-sm font-medium transition ${
                 activeCategory === category
-                  ? "border-sky-400/50 bg-sky-400/10 text-sky-300"
+                  ? "border-cyan-400/50 bg-cyan-400/10 text-cyan-300"
                   : "border-white/[0.08] bg-white/[0.02] text-slate-400 hover:border-white/20 hover:text-white"
               }`}
             >
@@ -69,7 +69,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
 
       {projects.length === 0 ? (
         <Card className="border-dashed p-8 sm:p-10">
-          <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-sky-400">Portfolio</p>
+          <p className="mb-2 font-mono text-xs uppercase tracking-[0.2em] text-cyan-400">Portfolio</p>
           <h3 className="text-2xl font-semibold">No projects to display</h3>
         </Card>
       ) : filteredProjects.length === 0 ? (
@@ -145,7 +145,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
 
                 <div className="p-6">
                   <div className="mb-3 flex items-center justify-between gap-4">
-                    <span className="rounded-full border border-sky-400/20 bg-sky-400/[0.07] px-3 py-1 text-xs font-medium text-sky-300">
+                    <span className="rounded-full border border-cyan-400/20 bg-cyan-400/[0.07] px-3 py-1 text-xs font-medium text-cyan-300">
                       {project.category}
                     </span>
                     {previewVideo && (
@@ -183,7 +183,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(event) => event.stopPropagation()}
-                        className="inline-flex h-11 items-center justify-center rounded-lg bg-sky-400 px-5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+                        className="inline-flex h-11 items-center justify-center rounded-lg bg-cyan-500 px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
                       >
                         Live Demo
                       </a>
@@ -191,7 +191,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
                       <Link
                         href="#contact"
                         onClick={(event) => event.stopPropagation()}
-                        className="inline-flex h-11 items-center justify-center rounded-lg bg-sky-400 px-5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+                        className="inline-flex h-11 items-center justify-center rounded-lg bg-cyan-500 px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
                       >
                         Live Demo
                       </Link>
@@ -225,7 +225,7 @@ export function ProjectShowcase({ projects }: { projects: Project[] }) {
             type="button"
             onClick={() => setPreview(null)}
             aria-label="Close preview"
-            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-slate-900 text-2xl text-white transition hover:border-sky-400/40 sm:right-7 sm:top-7"
+            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-slate-900 text-2xl text-white transition hover:border-cyan-400/40 sm:right-7 sm:top-7"
           >
             ×
           </button>

@@ -15,12 +15,12 @@ export default async function Home() {
     <main className="min-h-screen text-slate-100">
       <Section id="home" className="grid min-h-[calc(100vh-4rem)] items-center gap-12 py-16 lg:grid-cols-[1.15fr_.85fr]">
         <div className="relative max-w-3xl">
-          <div className="absolute -left-12 top-0 h-32 w-32 rounded-full bg-sky-500/10 blur-3xl" />
-          <p className="mb-5 font-mono text-sm uppercase tracking-[0.32em] text-sky-400">
+          <div className="absolute -left-16 -top-10 h-44 w-44 rounded-full bg-cyan-400/[0.08] blur-3xl" />
+          <p className="mb-5 font-mono text-sm uppercase tracking-[0.32em] text-cyan-400">
             Argh Tech <span className="text-slate-500">/ Orko / অর্ঘ্য সুতার</span>
           </p>
           <h1 className="text-[2.75rem] font-black leading-none tracking-[0.06em] sm:text-7xl sm:tracking-[0.1em] lg:text-8xl">
-            <span className="bg-gradient-to-r from-sky-300 via-sky-400 to-amber-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 via-cyan-400 to-amber-300 bg-clip-text text-transparent">
               INNOVATE
             </span>
           </h1>
@@ -37,8 +37,8 @@ export default async function Home() {
         </div>
 
         <div className="relative mx-auto w-full max-w-md">
-          <div className="absolute inset-12 rounded-full bg-sky-400/10 blur-3xl" />
-          <div className="relative aspect-square rounded-[2rem] border border-sky-400/20 bg-slate-950/60 p-6 shadow-[0_0_80px_rgba(56,189,248,.12)]">
+          <div className="absolute inset-12 rounded-full bg-cyan-400/[0.10] blur-3xl" />
+          <div className="relative aspect-square rounded-[2rem] border border-white/10 bg-[#111827]/75 p-6 shadow-[0_0_80px_rgba(6,182,212,.10)] backdrop-blur-md">
             <div className="absolute left-5 top-5 h-3 w-3 rounded-full bg-amber-400 shadow-[0_0_16px_rgba(251,191,36,.8)]" />
             <Image
               src="/assets/images/argh-tech-logo.jpeg"
@@ -54,7 +54,7 @@ export default async function Home() {
       <Section id="about" className="pb-20 pt-8">
         <Card className="grid gap-8 overflow-hidden p-6 sm:p-10 lg:grid-cols-[.7fr_1.3fr]">
           <div className="flex flex-col justify-between border-b border-white/[0.08] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-sky-400">About Argh Tech</p>
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">About Argh Tech</p>
             <div className="mt-10">
               <p className="text-6xl font-black text-amber-300">1+</p>
               <p className="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">Year of experience</p>

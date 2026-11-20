@@ -15,7 +15,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/[0.07] bg-[#050816]/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-[#090D16]/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" onClick={() => setOpen(false)} aria-label="Argh Tech home" className="flex items-center gap-3">
           <BrandMark showWordmark />
@@ -23,7 +23,7 @@ export function Header() {
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/[0.05] hover:text-sky-300">
+            <Link key={item.href} href={item.href} className="rounded-lg px-4 py-2 text-sm font-medium text-slate-400 transition hover:bg-cyan-400/[0.06] hover:text-cyan-300">
               {item.label}
             </Link>
           ))}
@@ -45,10 +45,10 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-white/[0.07] bg-[#050816] px-5 py-4 md:hidden" aria-label="Mobile navigation">
+        <nav className="border-t border-white/[0.07] bg-[#090D16]/95 px-5 py-4 backdrop-blur-md md:hidden" aria-label="Mobile navigation">
           <div className="mx-auto flex max-w-6xl flex-col">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/[0.05] hover:text-sky-300">
+              <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/[0.05] hover:text-cyan-300">
                 {item.label}
               </Link>
             ))}

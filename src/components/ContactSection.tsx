@@ -41,7 +41,7 @@ export function ContactSection() {
   return (
     <Section id="contact" className="pb-24 pt-8">
       <div className="mb-10">
-        <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-sky-400">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
           Start a conversation
         </p>
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
@@ -83,7 +83,7 @@ export function ContactSection() {
                 name="name"
                 required
                 placeholder="Your name"
-                className="h-12 rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 text-white outline-none transition placeholder:text-slate-600 focus:border-sky-400/50"
+                className="h-12 rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/50"
               />
             </label>
             <label className="grid gap-2 text-sm font-medium text-slate-300">
@@ -93,7 +93,7 @@ export function ContactSection() {
                 type="email"
                 required
                 placeholder="you@example.com"
-                className="h-12 rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 text-white outline-none transition placeholder:text-slate-600 focus:border-sky-400/50"
+                className="h-12 rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/50"
               />
             </label>
             <label className="grid gap-2 text-sm font-medium text-slate-300 sm:col-span-2">
@@ -102,7 +102,7 @@ export function ContactSection() {
                 name="service"
                 required
                 defaultValue=""
-                className="h-12 rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 text-white outline-none transition focus:border-sky-400/50"
+                className="h-12 rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 text-white outline-none transition focus:border-cyan-400/50"
               >
                 <option value="" disabled>Select a service</option>
                 <option>Landing Page Design &amp; Development</option>
@@ -120,7 +120,7 @@ export function ContactSection() {
                 required
                 rows={5}
                 placeholder="Tell me about your project..."
-                className="resize-none rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-sky-400/50"
+                className="resize-none rounded-lg border border-white/[0.08] bg-slate-950/70 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/50"
               />
             </label>
             <div className="flex flex-wrap items-center gap-4 sm:col-span-2">
@@ -142,7 +142,7 @@ function ContactDetail({ label, value, href }: { label: string; value: string; h
         href={href}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-        className="break-words text-base font-semibold text-slate-200 transition hover:text-sky-300"
+        className="break-words text-base font-semibold text-slate-200 transition hover:text-cyan-300"
       >
         {value}
       </a>

@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen py-16 text-zinc-50">
       <Section>
-        <Link href="/" className="text-sm text-cyan-400">← Back home</Link>
+        <Link href="/" className="text-sm font-medium text-cyan-400 transition hover:text-cyan-300">← Back home</Link>
         <h1 className="mb-6 mt-4 text-5xl font-bold">About</h1>
         <Card className="grid gap-8 p-6 sm:p-10 lg:grid-cols-[.7fr_1.3fr]">
           <div>

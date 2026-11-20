@@ -78,7 +78,7 @@ export function ServicesSection() {
   return (
     <Section id="services" className="pb-24 pt-8">
       <div className="mb-10 max-w-2xl">
-        <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-sky-400">
+        <p className="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-cyan-400">
           What I build
         </p>
         <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
@@ -93,10 +93,10 @@ export function ServicesSection() {
         {services.map((service, index) => (
           <Card
             key={service.title}
-            className="group flex min-h-[340px] flex-col p-6 hover:-translate-y-2 hover:border-sky-400/35"
+            className="group flex min-h-[340px] flex-col p-6 hover:-translate-y-2 hover:border-cyan-400/35"
           >
             <div className="mb-8 flex items-start justify-between">
-              <div className="grid h-12 w-12 place-items-center rounded-xl border border-sky-400/20 bg-sky-400/[0.08] text-sky-300 transition duration-300 group-hover:border-amber-400/30 group-hover:bg-amber-400/[0.08] group-hover:text-amber-300 group-hover:shadow-[0_0_24px_rgba(251,191,36,.12)]">
+              <div className="grid h-12 w-12 place-items-center rounded-xl border border-cyan-400/20 bg-cyan-400/[0.08] text-cyan-300 transition duration-300 group-hover:border-amber-400/30 group-hover:bg-amber-400/[0.08] group-hover:text-amber-300 group-hover:shadow-[0_0_24px_rgba(245,158,11,.12)]">
                 {service.icon}
               </div>
               <span className="font-mono text-xs text-slate-600">
@@ -114,10 +114,10 @@ export function ServicesSection() {
             <Link href="#contact" className="mt-7">
               <Button
                 variant="ghost"
-                className="w-full justify-between group-hover:border-sky-400/40"
+                className="w-full justify-between group-hover:border-cyan-400/40"
               >
                 Request This Service
-                <span aria-hidden="true" className="text-sky-300">→</span>
+                <span aria-hidden="true" className="text-cyan-300">→</span>
               </Button>
             </Link>
           </Card>

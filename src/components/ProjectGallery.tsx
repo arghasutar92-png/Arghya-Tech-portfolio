@@ -12,14 +12,14 @@ export function ProjectGallery({ project }: { project: Project }) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-lg bg-sky-400 px-5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-cyan-500 px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
           >
             Live Demo
           </a>
         ) : (
           <Link
             href="#contact"
-            className="inline-flex h-11 items-center justify-center rounded-lg bg-sky-400 px-5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-cyan-500 px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
           >
             Live Demo
           </Link>
@@ -56,7 +56,7 @@ export function ProjectGallery({ project }: { project: Project }) {
           href={project.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-flex h-11 items-center justify-center rounded-lg bg-sky-400 px-5 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+          className="mt-5 inline-flex h-11 items-center justify-center rounded-lg bg-cyan-500 px-5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
         >
           Live Demo
         </a>
